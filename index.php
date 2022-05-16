@@ -2,23 +2,24 @@
 
     class Film {
 
-        public $nome;
-        public $eta;
-        public $anno_pubblicazione;
+        public $title;
+        public $genre;
+        public $year;
 	
-        function __construct($_nome) {
-            $this->nome = $_nome;
+        function __construct($_title,  $_year) {
+            $this->title= $_title;
+            $this->year= $_year;
             $this->getDataonScreen();
         }
 
         public function getDataonScreen() {
-            echo('<p>'.$this->nome.'</p>');
+            echo('<p>'.$this->title.' '.$this->year.'</p>');
         }
     }
 
-    $movie = new Film('Godzilla');
-    $movie = new Film('La mummia');
-    $movie = new Film('Interstellar');
-    $movie = new Film('Zorro');
+    $movie = new Film('Godzilla', '2014');
+    $movie = new Film('La mummia', '2005');
+    $movie = new Film('Interstellar', '2016');
+    $movie = new Film('Zorro', '1980');
 
 ?>
